@@ -1,0 +1,362 @@
+ScreenManager:
+    PrincipalWindow:
+    IniciarScreen:
+    RegistroScreen:
+    NuevaScreen:
+    RegistroPacienteScreen:
+    PantallaPacienteScreen:
+<PrincipalWindow>:
+    name: "principal"
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 30
+        spacing: 40
+        canvas.before:
+            Color:
+                rgba: 1, 1, 0.996, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Image:
+            source: 'logo.png'
+            size_hint_y: None
+            height: 400
+            allow_stretch: True
+            keep_ratio: True
+
+        Label:
+            text: "Seguimiento clínico con sensores de fuerza."
+            font_size: 40
+            color: 0, 0, 0, 1
+            size_hint_y: None
+            height: self.texture_size[1] + 20
+        Button:
+            text: "Iniciar sesión"
+            font_size: 30
+            background_normal: ''
+            background_color: 0.462, 0.843, 0.768, 1
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            width: 300
+            height: self.texture_size[1] + 20
+            pos_hint: {"center_x": 0.5}
+            on_release:
+                app.root.current = "Iniciar sesion"  
+        Button:
+            text: "Registrarse"
+            font_size: 30
+            background_normal: ''
+            background_color: 0.462, 0.843, 0.768, 1
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            width: 300
+            height: self.texture_size[1] + 20
+            pos_hint: {"center_x": 0.5}
+            on_release:
+                app.root.current = "registrar" 
+        Widget:
+            size_hint_y: 1
+        BoxLayout:  
+            orientation: 'vertical'
+            size_hint_y: None
+            height: 120
+            padding: 10
+            spacing: 10
+            canvas.before:
+                Color:
+                    rgba: 0.02, 0.01, 0.00, 0.04
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: [15]
+            Label:
+                text: "Versión 1.0 "
+                font_size: 24
+                color: 0, 0, 0, 1
+            Label:
+                text: "Aplicación que forma parte del TFG de Claudia Valentín Alguacil"
+                font_size: 24
+                color: 0, 0, 0, 1
+            Label:
+                text: "Contacto: claudiavalgu@gmail.com"
+                font_size: 24
+                color: 0, 0, 0, 1
+<IniciarScreen>:
+    name: "Iniciar sesion"
+    BoxLayout:
+        orientation: "vertical"
+        padding: 30
+        spacing: 40
+        canvas.before:
+            Color:
+                rgba: 1, 1, 0.996, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: "Ingrese su usuario y contraseña"
+            color: 0, 0, 0, 1
+            font_size: 36
+        FloatLayout:
+            size_hint_y: None
+            height: 200  
+            TextInput:
+                id: login_usuario  
+                hint_text: "Usuario"
+                multiline: False
+                font_size: 24
+                size_hint: None, None
+                width: 300
+                height: 50
+                pos_hint: {"center_x": 0.5, "center_y": 1.35}
+            TextInput:
+                id: login_contrasena 
+                hint_text: "Contraseña"
+                password: True
+                multiline: False
+                font_size: 24
+                size_hint: None, None
+                width: 300
+                height: 50
+                pos_hint: {"center_x": 0.5, "center_y": 0.85}
+        Button:
+            text: "Entrar"
+            font_size: 30
+            background_normal: ''
+            background_color: 0.462, 0.843, 0.768, 1
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            width: 300
+            height: self.texture_size[1] + 20
+            pos_hint: {"center_x": 0.5}
+            on_release: 
+                root.verificar_login()  
+        Button:
+            text: "Volver"
+            font_size: 30
+            background_normal: ''
+            background_color: 0.75 ,0.22,0.16,1
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            width: 300
+            height: self.texture_size[1] + 20
+            pos_hint: {"center_x": 0.5}
+            on_release:
+                app.root.current = "principal"
+<RegistroScreen>:
+    name: "registrar"
+    BoxLayout:
+        orientation: "vertical"
+        padding: 30
+        spacing: 40
+        canvas.before:
+            Color:
+                rgba: 1, 1, 0.996, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: "Cree su cuenta"
+            color: 0, 0, 0, 1
+            font_size: 36
+        TextInput:
+            id: nombre_input
+            hint_text: "Nombre"
+            multiline: False
+            font_size: 24
+        TextInput:
+            id: apellidos_input
+            hint_text: "Apellidos"
+            multiline: False
+            font_size: 24
+        TextInput:
+            id: usuario_input
+            hint_text: "Usuario"
+            multiline: False
+            font_size: 24
+        TextInput:
+            id: contrasena_input
+            hint_text: "Contraseña"
+            password: True
+            multiline: False
+            font_size: 24
+        Button:
+            text: "Registrarse"
+            font_size: 28
+            background_color: 0.462, 0.843, 0.768, 1
+            size_hint_y: None
+            height: 50
+            on_release:
+                root.registrar_usuario()
+        Button:
+            text: "Volver"
+            font_size: 28
+            background_color: 0.5, 0, 0, 1
+            size_hint_y: None
+            height: 50
+            on_release:
+                app.root.current = "principal"
+<NuevaScreen>:
+    name: "nueva"
+    BoxLayout:
+        orientation: "vertical"
+        padding: 30
+        spacing: 40
+        canvas.before:
+            Color:
+                rgba: 1, 1, 0.996, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        BoxLayout:  
+            orientation: 'vertical'
+            size_hint_y: None
+            height: 120
+            padding: 10
+            spacing: 10
+            canvas.before:
+                Color:
+                    rgba: 0.462, 0.843, 0.768, 1 
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: [15]
+            Label:
+                id: label_nombre
+                text: " "
+                font_size: 24
+                color: 0, 0, 0, 1
+        Label:
+            text: "Bienvenido a la pantalla de incio."
+            font_size: 28
+            color: 0, 0, 0, 1
+        Label:
+            text: "Para empezar con la medición elige un paciente o registra uno nuevo."
+            font_size: 28
+            color: 0, 0, 0, 1
+        Widget:
+            size_hint_y: 1
+        Spinner:
+            id: paciente_spinner
+            text: "Seleccionar paciente"
+            values: []  
+            height: 50
+            font_size: 24
+            background_normal:""
+            background_color: 0.462, 0.843, 0.768, 1 
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            width: 300
+            height: self.texture_size[1] + 20
+            pos_hint: {"center_x": 0.5}
+            on_text: root.seleccionar_paciente(self.text)
+        Button:
+            text: "Registrar paciente"
+            font_size: 28
+            background_normal:""
+            background_color: 0.75 ,0.22,0.16,1
+            color: 0, 0, 0, 1
+            size_hint: None, None
+            width: 300
+            height: self.texture_size[1] + 20
+            pos_hint: {"center_x": 0.5}
+            on_release:
+                app.root.current = "RegistroPaciente"
+<RegistroPacienteScreen>:
+    name: "RegistroPaciente"
+    BoxLayout:
+        orientation: "vertical"
+        padding: 30
+        spacing: 40
+        canvas.before:
+            Color:
+                rgba: 1, 1, 0.996, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: "Crear nuevo paciente"
+            color: 0, 0, 0, 1
+            font_size: 36
+            size_hint_y: None
+            height: 60
+        TextInput:
+            id: paciente_nombre_input
+            hint_text: "Nombre del paciente"
+            multiline: False
+            font_size: 24
+            size_hint_y: None
+            height: 50
+        TextInput:
+            id: paciente_apellidos_input
+            hint_text: "Apellidos del paciente"
+            multiline: False
+            font_size: 24
+            size_hint_y: None
+            height: 50
+        TextInput:
+            id: paciente_dia_input
+            hint_text: "Día de inicio del tratamiento"
+            multiline: False
+            font_size: 24
+            size_hint_y: None
+            height: 50
+        Button:
+            text: "Registrar paciente"
+            font_size: 28
+            background_color: 0.462, 0.843, 0.768, 1
+            size_hint_y: None
+            height: 50
+            on_release:
+                root.registrar_datos_paciente()
+        Button:
+            text: "Volver"
+            font_size: 28
+            background_color: 0.5, 0, 0, 1
+            size_hint_y: None
+            height: 50
+            on_release:
+                app.root.current = "nueva"
+<PantallaPacienteScreen>:
+    name:"PantallaPaciente"
+    BoxLayout:
+        orientation: "vertical"
+        padding: 30
+        spacing: 40
+        canvas.before:
+            Color:
+                rgba: 1, 1, 0.996, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        BoxLayout:  
+            orientation: 'vertical'
+            size_hint_y: None
+            height: 120
+            padding: 10
+            spacing: 10
+            canvas.before:
+                Color:
+                    rgba: 0.909, 0.964, 0.952, 1 
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: [15]
+            Label:
+                id: paciente_nombre_input
+                text: " "
+                font_size: 24
+                color: 0, 0, 0, 1
+        Label:
+            id: paciente_dia_input
+            text: " "
+            font_size: 24
+            color: 0, 0, 0, 1
+        Button:
+            text: "Volver"
+            font_size: 28
+            background_color: 0.5, 0, 0, 1
+            size_hint_y: None
+            height: 50
+            on_release:
+                app.root.current = "nueva"
