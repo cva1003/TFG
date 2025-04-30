@@ -21,7 +21,18 @@ Se ejecuta en una terminal o ventana de texto.\cite{Bash}\footnote{Pagina web co
 En este proyecto ha sido utilizado en la terminal de Rstudio para la creación de archivos, actualización de GitHub entre otras tareas.
 ----
 \subsection{Bibliotecas}
-Añadir**
+La bibliotecas o librerías son un conjunto de funciones, clases y recursos ya escritos que se pueden utilizar de manera libre para agilizar procesos. 
+
+\subsubsection{json}
+Librería que permite la edición y adicción de documentos JSON.
+\subsubsection{os}
+Librería que permite la interacción con el sistema operativo.
+\subsubsection{pandas}
+Librería que permite el análisis y manipulación de datos.
+\subsubsection{openpyxl}
+Librería que permite leer, modificar y escribir archivos excel.
+\subsubsection{Kivy}
+Librería que permite la creación de interfaces gráficas de usuario(GUI).\cite{kivy}\footnote{Pagina web con información de kivy y documentación\cite{kivy}.}
 \section{Entornos y aplicaciones}
 En esta sección voy a realizar una recopilación de aplicaciones y entornos que he utilizado para la realización del proyecto, todas ellas explicadas y utilizadas en diferentes asignaturas del grado.
 \subsection{Overleaf}
@@ -46,6 +57,11 @@ Visual Studio Code es una aplicación que funciona como editor de código fuente
 Permite al usuario la creación y edición de archivos en múltiples lenguajes y formatos, desde texto plano hasta YAML, pasando por JSON, Markdown, XML y muchos otros; además, gracias a sus múltiples extensiones, permite, entre otras cosas, el control de versiones con la extensión de GitHub o incluso el uso de IA con la extensión de Copilot.
 
 En este proyecto, ha sido utilizada para realizar la interfaz y establecer la comunicación con la placa Elegoo, la elección de este editor se debió a las características mencionadas anteriormente, la facilidad de uso y la versatilidad, permitiendo un desarrollo ágil y eficiente del proyecto.
+\subsection{Freecad}
+Freecad es una aplicación multiplataforma, de código abierto y completamente gratuita, que permite al usuario crear diseños en tres dimensiones.
+Es un modelador 3D paramétrico de código abierto, permitiendo así diseños lo mas proximos a la realidad.
+
+En este proyecto, ha sido utilizada para realizar un modelo 3D para el proyecto.\cite{freecad}\footnote{Pagina web con información y posibilidad de descarga de freecad\cite{freecad}.} 
 
 \section{Herramientas}
 En esta sección voy a exponer y explicar las herramientas que he utilizado en el proyecto.
@@ -54,48 +70,48 @@ Placa de Arduino es una placa de desarrollo de código abierto.
 Integra el microcontrolador chip Atmel ATMEGA+328P principal y un ATmega16U2 para la comunicación con USB. \cite{Elegoo}\footnote{Pagina web con información de placa Elegoo\cite{Elegoo}.}
 
 Esta formado con 14 pines digitales, 6 pines analógicos, 5 pines de energía, un puerto de USB para la conexión con el ordenador, un conector para la alimentación, un botón de reinicio,un resonador de cerámica de 16 MHz, leds indicadores y los puertos I2C y SPI.\cite{Arduino}\footnote{Pagina web con información de Arduino\cite{Arduino}.}
-En la \textit{Figura 4.1} se puede ver una imagen del componente.
+En la \textit{Figura \ref{fig:Placa Elegoo}} se puede ver una imagen del componente.
 \begin{figure}[h]
         \centering
         \includegraphics[angle=90,width=0.6\textwidth]{img/placa elegoo.png}
         \caption{Placa Elegoo}
-        \label{fig:activforce}
+        \label{fig:Placa Elegoo}
     \end{figure}
 
 \subsection{Cables Dupont}
-Alambres de metal conductor recubiertos de un plástico aislante flexibles que permiten las conexiones entre los propios componentes de la protoboard o entre la protoboard y la placa de Elegoo. En la \textit{Figura 4.2} se puede ver una imagen del componente.
+Alambres de metal conductor recubiertos de un plástico aislante flexibles que permiten las conexiones entre los propios componentes de la protoboard o entre la protoboard y la placa de Elegoo. En la \textit{Figura \ref{fig:cable_dupont}} se puede ver una imagen del componente.
 \begin{figure}[h]
         \centering
         \includegraphics[angle=90,width=0.6\textwidth]{img/cable_dupont.png}
         \caption{Cables}
-        \label{fig:activforce}
+        \label{fig:cable_dupont}
     \end{figure}
    
 \subsection{Cable USB}
-Conector que une la placa Elegoo con el ordenador, permite introducir las instrucciones programadas en el ordenador en placa Elegoo. En la \textit{Figura 4.3} se puede ver una imagen del componente.
+Conector que une la placa Elegoo con el ordenador, permite introducir las instrucciones programadas en el ordenador en placa Elegoo. En la \textit{Figura \ref{fig:Cable USB}} se puede ver una imagen del componente.
 \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{img/cable usb.png}
         \caption{Cable USB}
-        \label{fig:activforce}
+        \label{fig:Cable USB}
     \end{figure}
    
 \subsection{Resistencias}
-Componentes electrónicos que limitan el flujo de la energía eléctrica en el circuito, son una medida de la oposición al flujo de corriente.  En la \textit{Figura 4.4} se puede ver una imagen del componente.\cite{Resistencia}\footnote{Pagina web con información de las resistencias\cite{Resistencia}.}
+Componentes electrónicos que limitan el flujo de la energía eléctrica en el circuito, son una medida de la oposición al flujo de corriente.  En la \textit{Figura \ref{fig:Resistencias}} se puede ver una imagen del componente.\cite{Resistencia}\footnote{Pagina web con información de las resistencias\cite{Resistencia}.}
 \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{img/Resistencias.png}
         \caption{Resistencia}
-        \label{fig:activforce}
+        \label{fig:Resistencias}
     \end{figure}
     
 \subsection{Protoboard}
-También llamada placa de pruebas, permite la creación de circuitos electrónicos.Es una matriz con orificios interconectados que permiten la inserción de componentes eléctricos. En la \textit{Figura 4.5} se puede ver una imagen del componente.
+También llamada placa de pruebas, permite la creación de circuitos electrónicos.Es una matriz con orificios interconectados que permiten la inserción de componentes eléctricos. En la \textit{Figura \ref{fig:Protoboard} } se puede ver una imagen del componente.
 \begin{figure}[h]
         \centering
         \includegraphics[angle=90,width=0.5\textwidth]{img/Protoboard.png}
         \caption{Protoboard}
-        \label{fig:activforce}
+        \label{fig:Protoboard}
     \end{figure}
 \subsection{Posibles sensores}
 En esta subsección se presentarán los sensores investigados para la realización del proyecto, el sensor seleccionado y el porqué de su selección.
@@ -114,10 +130,11 @@ Existen múltiples tipos de los cuales destacamos los siguientes:
         \item Células de carga piezoélectricas: miden fuerzas dinámicas o cuasistáticas, tanto de tracción como compresión.Muy sensibles y rápidas.
         \cite{Celulas_piezoelectricas}\footnote{Pagina web con información de las células de carga de tipo piezoélectricas \cite{Celulas_piezoelectricas}.}
     \end{itemize}
-En la \textit{tabla 4.1} se realiza un resumen donde se expondrán el tipo, características y precio aproximado de cada una de ellas.
-\begin{table}[]
+En la \textit{tabla \ref{tab:comparacion_sensores}} se realiza un resumen donde se expondrán el tipo, características y precio aproximado de cada una de ellas.
+\begin{table}[j]
 \centering
 \begin{tabular}{|l|p{8cm}|c|}
+\rowcolor[HTML]{BFBFBF} 
 \hline
 \textbf{Tipo} & \textbf{Características de medición} & \textbf{Precio} \\
 \hline
@@ -138,3 +155,13 @@ Sensor de fuerza resistivo & Aproximadamente de 0-300N, precisión alta y de peq
 
 Tras comparar los distintos sensores según su precio, características e integración, he concluido que los sensores de fuerza resistivos son la mejor opción para llevar a cabo el proyecto.
 
+\subsection{{Sensor de fuerza resistivo}}
+Como se ha explicado anteriormente los sensores de fuerza resistivos son sensores capaces de medir la fuerza ejercida con el uso de resistencias.
+
+Para el proyecto se ha utilizado el sensor MD30-60 capaz de medir de 0 a 30Kg. 
+\begin{figure}[h]
+        \centering
+        \includegraphics[,width=0.5\textwidth]{img/sensor.png}
+        \caption{Sensor de fuerza MD30-60}
+        \label{fig:Sensor de fuerza}
+    \end{figure}
