@@ -1,12 +1,15 @@
 import json
 import os
+import pandas as pd
 from kivy.app import App
 from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
 from kivy.uix.popup import Popup
 from kivy.uix.label import Label
 from openpyxl import load_workbook
-import pandas as pd
+from kivy.metrics import dp
+from kivymd.app import MDApp
+from kivymd.uix.datatables import MDDataTable
 
 usuarios_registrados = "usuarios.json"
 
@@ -35,20 +38,33 @@ class PrincipalWindow(Screen):
 class PantallaPacienteScreen(Screen):
     def actualizar_nombre(self, nombre_completo):
         self.ids.paciente_nombre_input.text = f'Paciente: {nombre_completo.replace("_", " ") }'
+        self.tabla(nombre_completo)
+    def tabla(self,nombre_completo):
+        DATA = pd.read_excel("registro_pacientes.xlsx", sheet_name=nombre_completo)
+        cols = DATA.columns.values
+        values = DATA.values
+        self.data_tables = MDDataTable(
+            use_pagination=True,
+            column_data=[(col, dp(30)) for col in cols],
+            row_data=values
+        )
+        contenedor = self.ids.get("contenedor_tabla")
+        contenedor.clear_widgets() # limpio pagina al cambiar de un paciente a otro.
+        contenedor.add_widget(self.data_tables)
+
+        return self.data_tables
+
 class RegistroPacienteScreen(Screen):
     def registrar_datos_paciente(self):
         nombre = self.ids.paciente_nombre_input.text
         apellidos = self.ids.paciente_apellidos_input.text
-        dia = self.ids.paciente_dia_input.text
-        
-        if not nombre or not apellidos or not dia:
+        if not nombre or not apellidos:
             mostrar_advertencia("Es obligatorio rellenar todos los datos.")
         else: 
             app = App.get_running_app()
             app.root.current = "nueva"
         archivo_excel = "registro_pacientes.xlsx"
         nombre_hoja = f"{nombre}_{apellidos}".replace(" ", "_")
-
         if not os.path.exists(archivo_excel):
             with pd.ExcelWriter(archivo_excel, engine='openpyxl') as writer:
                 df = pd.DataFrame(columns=["Fecha", "Indice", "Corazón","Anular","Meñique","Pulgar"]) 
@@ -95,7 +111,7 @@ class RegistroScreen(Screen):
             usuarios[usuario] = {"nombre": nombre,"apellidos": apellidos,"contraseña": contraseña}
             guardar_usuarios(usuarios)
             App.get_running_app().root.current = "principal"
-class MiApp(App):
+class MiApp(MDApp):
     def build(self):
-        return Builder.load_file("hospital.kv")
+        return Builder.load_file("interfaz.kv")
 MiApp().run()

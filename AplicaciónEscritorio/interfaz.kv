@@ -23,7 +23,6 @@ ScreenManager:
             height: 400
             allow_stretch: True
             keep_ratio: True
-
         Label:
             text: "Seguimiento clínico con sensores de fuerza."
             font_size: 40
@@ -254,8 +253,7 @@ ScreenManager:
             text: "Registrar paciente"
             font_size: 28
             background_normal:""
-            background_color: 0.75 ,0.22,0.16,1
-            color: 0, 0, 0, 1
+            background_color: 0.5, 0, 0, 1
             size_hint: None, None
             width: 300
             height: self.texture_size[1] + 20
@@ -294,13 +292,6 @@ ScreenManager:
             font_size: 24
             size_hint_y: None
             height: 50
-        TextInput:
-            id: paciente_dia_input
-            hint_text: "Día de inicio del tratamiento"
-            multiline: False
-            font_size: 24
-            size_hint_y: None
-            height: 50
         Button:
             text: "Registrar paciente"
             font_size: 28
@@ -312,6 +303,7 @@ ScreenManager:
         Button:
             text: "Volver"
             font_size: 28
+            background_normal:""
             background_color: 0.5, 0, 0, 1
             size_hint_y: None
             height: 50
@@ -347,16 +339,31 @@ ScreenManager:
                 text: " "
                 font_size: 24
                 color: 0, 0, 0, 1
-        Label:
-            id: paciente_dia_input
-            text: " "
-            font_size: 24
+        Button:
+            text: "Iniciar medición"
+            font_size: 28
+            background_normal: ''
+            background_color:  0.953, 0.612, 0.071, 1
             color: 0, 0, 0, 1
+            size_hint: None, None
+            width: 300
+            height: self.texture_size[1] + 20
+            pos_hint: {"center_x": 0.5}
+            
+        FloatLayout:
+            BoxLayout:
+                orientation: 'vertical'
+                id: contenedor_tabla
+                size_hint: 0.7,1
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}  # esto lo centra
         Button:
             text: "Volver"
             font_size: 28
+            background_normal:""
             background_color: 0.5, 0, 0, 1
-            size_hint_y: None
-            height: 50
+            size_hint: None, None
+            width: 300
+            height: self.texture_size[1] + 20
+            pos_hint: {"center_x": 0.5}
             on_release:
                 app.root.current = "nueva"
