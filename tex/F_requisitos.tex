@@ -12,6 +12,7 @@ Existen 3 personas diferentes, ingeniero , usuario (sanitario) y el paciente, co
 \end{figure}
 \section{Explicación casos de uso.}
 
+En esta sección se van a explicar de forma detallada cada uno de los casos de uso que se realizan, desde la puesta en marcha del dispositivo por los ingenieros hasta su uso en el hospital por los sanitarios.
 
 \begin{table}[p]
 	\centering
@@ -351,12 +352,42 @@ Existen 3 personas diferentes, ingeniero , usuario (sanitario) y el paciente, co
 	\end{tabularx}
 	\caption{CU-13 Ver seguimiento pacientes.}
 \end{table}
+
+
+\newpage
+
 \section{Prototipos de interfaz o interacción con el proyecto.}
 
 Se ha realizado un prototipo de interfaz para ordenador, tipo desplegable, en base a las necesidades y requisitos para su uso. 
 
 Esta interfaz creada consta de 7 pantallas:
 \begin{enumerate}
-    \item Pantalla Principal: es la pantalla de presentación (véase figura ), en ella se muestra el logo de la aplicación , dos botones, iniciar sesión y registrarse, y un recuadro con información relevante sobre la interfaz.
-    \item 
+    \item Pantalla Principal: es la pantalla de presentación (véase figura \ref{fig:Pantalla principal}), en ella se muestra el logo de la aplicación , dos botones, iniciar sesión y registrarse, y un recuadro con información relevante sobre la interfaz.
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{img/Pantalla principal.png}
+        \caption{Pantalla principal. Fuente Propia.}
+        \label{fig:Pantalla principal}
+    \end{figure}
+    \item Pantalla Inicio Sesión: es la pantalla que permite al usuario (sanitario) iniciar sesión en la interfaz (véase figura \ref{fig:Pantalla Inicio Sesión}), en ella se debe introducir el usuario y contraseña personal de cada usuario para acceder al área. Desde esta pantalla, se puede volver a la pantalla principal seleccionando el botón 'Volver' o bien, acceder a la siguiente pantalla seleccionando el botón 'Entrar'.
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{img/Pantalla Inicio Sesión.png}
+    \caption{Pantalla Inicio Sesión.Fuente Propia.}
+    \label{fig:Pantalla Inicio Sesión}
+\end{figure}
+    \item Pantalla Registrar Usuario: es la pantalla que permite al usuario (sanitario) registrarse en la interfaz (véase figura \ref{fig:img/Pantalla Registrar Usuario}), en ella se debe introducir el nombre, apellidos, nombre de usuario y contraseña personal. Estos datos se almacenarán en un documento Json.Desde esta pantalla, se puede volver a la pantalla principal sin registrar un nuevo usuario seleccionando el botón 'Volver' o bien, registrar un nuevo usuario seleccionando el botón 'Registrarse'. Realizando la ultima acción la app te dirige de forma automático a la pantalla principal
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{img/Pantalla Registrar Usuario.png}
+        \caption{img/Pantalla Registrar Usuario.Fuente propia}
+        \label{fig:img/Pantalla Registrar Usuario}
+    \end{figure}
+    \item Pantalla de Inicio: es la pantalla principal de cada usuario (véase figura\ref{fig:Pantalla Inicio} ). Consta de un recuadro con el nombre y apellidos del profesional, un mensaje de bienvenida y dos botones, uno de seleccionar paciente y otro de registrar paciente. Si seleccionamos el primero de ellos, sale un menú desplegable con los diferentes nombre y apellidos de los pacientes registrados. Si seleccionamos el segundo botón, nos dirige a una pantalla nueva que nos permitirá el registro de un nuevo paciente.
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{img/Pantalla Inicio.png}
+        \caption{Pantalla Inicio. Fuente Propia}
+        \label{fig:Pantalla Inicio}
+    \end{figure}
 \end{enumerate}
