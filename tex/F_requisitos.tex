@@ -1,0 +1,362 @@
+\apendice{Especificación de Requisitos}
+
+\section{Diagrama de casos de uso}
+En la figura \ref{fig:Diagrama Casos de uso} , se puede observar el diagrama de casos de uso definido para el uso del dispositivo. 
+
+Existen 3 personas diferentes, ingeniero , usuario (sanitario) y el paciente, con funciones diferentes 
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{img/Diagrama Casos de Uso.png}
+    \caption{Diagrama Casos de uso. Fuente propia}
+    \label{fig:Diagrama Casos de uso}
+\end{figure}
+\section{Explicación casos de uso.}
+
+
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.21\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{CU-1}    & \textbf{Instalar Arduino IDE y Python}\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Claudia Valentín Alguacil \\
+		\textbf{Requisitos asociados} & RF-xx, RF-xx \\
+		\textbf{Descripción}          & Instalación de ambas apps en el ordenador \\
+		\textbf{Precondición}         & Tener acceso al ordenador del profesional \\
+		\textbf{Acciones}             &
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+			\item Acceder a la web de ambas apps.
+			\item Descargarlas en el ordenador.
+                \item Instalarlas en el ordenador.
+		\end{enumerate}\\
+		\textbf{Postcondición}        &  Se podrán abrir ambas apps y ver el código \\
+		\textbf{Excepciones}          & Sin acceso a internet no se pueden descargar. \\
+		\textbf{Importancia}          & Alta \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-1 Nombre del caso de uso.}
+\end{table}
+
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.21\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{CU-2}    & \textbf{Cargar código en la placa Arduino }\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Claudia Valentín Alguacil \\
+		\textbf{Requisitos asociados} & RF-xx, RF-xx \\
+		\textbf{Descripción}          & Cargar código que produce que los sensores midan la fuerza generada por el paciente  \\
+		\textbf{Precondición}         & Tener descargado e instalado Arduino IDE \\
+		\textbf{Acciones}             &
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+			\item Abrir código Arduino.ino en Arduino IDE.
+			\item Conectar placa arduino al ordenador mediante el cable USB.
+                \item Mandar el código desde la aplicación a la placa Arduino.
+		\end{enumerate}\\
+		\textbf{Postcondición}        &  Se puede medir pesos\\
+		\textbf{Excepciones}          & Conectar mal la placa o cable USB roto. \\
+		\textbf{Importancia}          & Alta \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-2 Cargar código en la placa Arduino.}
+\end{table}
+
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.21\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{CU-3}    & \textbf{Descargar códigos arduino e interfaz}\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Claudia Valentín Alguacil \\
+		\textbf{Requisitos asociados} & RF-xx, RF-xx \\
+		\textbf{Descripción}          & Descargar los códigos que permiten utilizar el dispositivo y la interfaz \\
+		\textbf{Precondición}         & Tener acceso a los códigos \\
+		\textbf{Acciones}             &
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+			\item Acceder a la carpeta que contienen los archivos.
+			\item Descargarlas en el ordenador.
+		\end{enumerate}\\
+		\textbf{Postcondición}        &  -- \\
+		\textbf{Excepciones}          & Sin acceso a internet no se pueden descargar. \\
+		\textbf{Importancia}          & Alta \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-3 Descargar los códigos que permiten utilizar el dispositivo y la interfaz}
+\end{table}
+% Caso de Uso 1 -> Consultar Experimentos.
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.21\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{CU-4} & \textbf{Instalar bibliotecas}\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Claudia Valentín Alguacil \\
+		\textbf{Requisitos asociados} & RF-xx, RF-xx \\
+		\textbf{Descripción}          & Instalación de las bibliotecas necesarias para que el ordenador pueda procesar y abrir la interface sin problemas\\
+		\textbf{Precondición}         & Tener descargado python en el ordenador \\
+		\textbf{Acciones}             &
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+			\item Acceder al CMD del ordenador.
+			\item Instalar una a una las bibliotecas.
+		\end{enumerate}\\
+		\textbf{Postcondición}        &  Se podrán abrir la interface sin ningun problema \\
+		\textbf{Excepciones}          & Si no se instalan correctamente, no se podrá abrir la interfaz \\
+		\textbf{Importancia}          & Alta \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-4 Instalar bibliotecas.}
+\end{table}
+
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.21\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{CU-5}    & \textbf{Abrir interface}\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Claudia Valentín Alguacil \\
+		\textbf{Requisitos asociados} & RF-xx, RF-xx \\
+		\textbf{Descripción}          & Proceso de abrir la interface por parte del sanitario \\
+		\textbf{Precondición}         & Que el ingeniero haya realizado correctamente sus funciones de descarga e instalación de los diferentes paquetes y aplicaciones requeridas \\
+		\textbf{Acciones}             &
+        Opcion 1: 
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+			\item Abrir el CMD del ordenador.
+			\item Navegar hasta la carpeta en la que esta el código descargado.
+                \item Ejecutar el comando:
+                
+                \$ python app.py
+		\end{enumerate}
+        Opcion dos:
+        \begin{itemize}
+        \def\labelenumi{\arabic{enumi}.}
+		  \tightlist
+            \item Abrir Visual Estudio Code
+            \item Abrir la carpeta donde se encuentra el codigo descargado.
+            \item Ejecutar el comando:
+                
+            \$ python app.py
+        \end{itemize} \\
+		\textbf{Postcondición}        &  Se abre la interfaz. \\
+		\textbf{Excepciones}          & Que haya algún fallo durante el proceso que realiza el ingeniero o que se acceda mal a la carpeta lo que produciría un error y no se desplegaría la interfaz \\
+		\textbf{Importancia}          & Alta \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-6 Abrir interface.}
+\end{table}
+
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.21\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{CU-7}    & \textbf{Registrarse}\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Claudia Valentín Alguacil \\
+		\textbf{Requisitos asociados} & RF-xx, RF-xx \\
+		\textbf{Descripción}          & El sanitario se crea una cuenta en la interfaz para que pueda acceder en otras ocasiones. Este proceso produce una recopilación de datos personales como son el nombre, apellidos, nombre de usuario y  una contraseña  \\
+		\textbf{Precondición}         & Que la interfaz abra correctamente y no tener un usuario ya registrado \\
+		\textbf{Acciones}             &
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+			\item Abrir interfaz.
+			\item Seleccionar botón de 'Registrarse'.
+                \item Rellenar todos los datos requeridos.
+                \item Seleccionar botón de 'Registrarse'.
+		\end{enumerate}\\
+		\textbf{Postcondición}        &  Usuario registrado lo que permitiría acceder a la siguiente pantalla iniciando sesión \\
+		\textbf{Excepciones}          & Realizar mal el proceso de registro \\
+		\textbf{Importancia}          & Media \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-7 Nombre del caso de uso.}
+\end{table}
+
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.21\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{CU-8}    & \textbf{Iniciar sesión }\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Claudia Valentín Alguacil \\
+		\textbf{Requisitos asociados} & RF-xx, RF-xx \\
+		\textbf{Descripción}          & El sanitario inicia sesión en la interfaz lo que permite que pueda visualizar los registros de sus pacientes, registrar nuevas cuantificaciones o pacientes. \\
+		\textbf{Precondición}         & Tener una cuenta creada mediante el registro de nuevo usuario \\
+		\textbf{Acciones}             &
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+                \item Abrir interfaz.
+			\item Seleccionar botón de 'Iniciar sesión'.
+                \item Rellenar la información de inicio de           sesión (usuario y contraseña).
+                \item Seleccionar botón de 'Iniciar sesión'.
+			\item La interfaz verifica la información recibida.
+                \item Se accede a otra pantalla donde se puede visualizar los registros de sus pacientes,registrar nuevas cuantificaciones o pacientes.
+		\end{enumerate}\\
+		\textbf{Postcondición}    &  Acceder a la siguiente pantalla de la interfaz\\
+		\textbf{Excepciones}  & Poner mal el usuario o contraseña. \\
+		\textbf{Importancia} & Alta \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-8 Iniciar sesión .}
+\end{table}
+
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.21\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{CU-9}    & \textbf{Registrar paciente.}\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Claudia Valentín Alguacil \\
+		\textbf{Requisitos asociados} & RF-xx, RF-xx \\
+		\textbf{Descripción}          & Registrar el paciente en la interfaz, supone una recolección de datos como su nombre y apellidos que se recogerán en una base de datos \\
+		\textbf{Precondición}  & Que no este el paciente ya registrado y que el sanitario haya iniciado sesión.\\
+		\textbf{Acciones}             &
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+                \item Seleccionar botón de 'Registrar paciente'.
+                \item Rellenar la información de registro del paciente (nombre y apellidos).
+                \item Seleccionar botón de 'Registrar paciente'.
+		\end{enumerate}\\
+		\textbf{Postcondición} &  Se podrán registrar datos del usuario. \\
+		\textbf{Excepciones} & -- \\
+		\textbf{Importancia}          & Alta \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-9 Registrar paciente.}
+\end{table}
+
+
+
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.21\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{CU-10}    & \textbf{Conectar la placa de arduino al ordenador.}\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Claudia Valentín Alguacil \\
+		\textbf{Requisitos asociados} & RF-xx, RF-xx \\
+		\textbf{Descripción}          & Conectar el cable USB de la placa de arduino al puerto USB del ordenador \\
+		\textbf{Precondición} & Tener el dispositivo(placa de arduino y sensores) \\
+		\textbf{Acciones}             &
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+			\item Conectar cable USB al puerto USB del ordenador.
+		\end{enumerate}\\
+		\textbf{Postcondición}        &  Se podrá realizar la cuantificación de la presión ejercida \\
+		\textbf{Excepciones}          & Conectar mal el USB \\
+		\textbf{Importancia}          & Alta \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-10 Conectar la placa de arduino al ordenador.}
+\end{table}
+
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.21\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{CU-11}    & \textbf{Iniciar medición}\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Claudia Valentín Alguacil \\
+		\textbf{Requisitos asociados} & RF-xx, RF-xx \\
+		\textbf{Descripción}          & Proceso de cuantificar los valores que recoge los sensores. \\
+		\textbf{Precondición}         & Conectar placa de arduino al ordenador y tener desplegado la interfaz. \\
+		\textbf{Acciones}             &
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+			\item Seleccionar al paciente con el que se quiera registrar una nueva cuantificación.
+			\item Conectar la placa de arduino al ordenador.
+                \item Seleccionar botón iniciar medición de la interfaz y pulsar el pin botón del dispositivo.
+		\end{enumerate}\\
+		\textbf{Postcondición}        &  Ver seguimiento pacientes\\
+		\textbf{Excepciones}          & No conectar la placa al ordenador. \\
+		\textbf{Importancia}          & Media \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-11 Iniciar medición.}
+\end{table}
+
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.21\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{CU-12}    & \textbf{Ejercer fuerza en los sensores}\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Claudia Valentín Alguacil \\
+		\textbf{Requisitos asociados} & RF-xx, RF-xx \\
+		\textbf{Descripción}          & El paciente debe de realizar fuerza en los sensores del dispositivo, colocando cada dedo según el sensor en el que corresponde. \\
+		\textbf{Precondición}         &  Casos de Uso :09,11 y 12\\
+		\textbf{Acciones}             &
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+			\item Conectar placa arduino al ordenador.
+			\item Seleccionar iniciar medición.
+                \item Hacer fuerza en la mano.
+		\end{enumerate}\\
+		\textbf{Postcondición}        &  Se podrá observar los datos recogidos en la tabla. \\
+		\textbf{Excepciones}          & Mala captación de datos. \\
+		\textbf{Importancia}          & Media \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-12 Hacer fuerza en el dispositivo.}
+\end{table}
+
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.21\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{CU-13}    & \textbf{Ver seguimiento pacientes}\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Claudia Valentín Alguacil \\
+		\textbf{Requisitos asociados} & RF-xx, RF-xx \\
+		\textbf{Descripción}          & Visualización de los registros de los pacientes realizadas mediante la cuantificación de la presión/fuerza que se ejerce a los sensores.\\
+		\textbf{Precondición}         & Tener registros \\
+		\textbf{Acciones}             &
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+			\item Acceder a la pantalla del paciente del que queramos observar el seguimiento.
+			\item Seleccionar 'Visualización Registro'.
+                \item Visualizar todos los registros realizados.
+		\end{enumerate}\\
+		\textbf{Postcondición}        &  -- \\
+		\textbf{Excepciones}          & -- \\
+		\textbf{Importancia}          & Baja/Media \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-13 Ver seguimiento pacientes.}
+\end{table}
+\section{Prototipos de interfaz o interacción con el proyecto.}
+
+Se ha realizado un prototipo de interfaz para ordenador, tipo desplegable, en base a las necesidades y requisitos para su uso. 
+
+Esta interfaz creada consta de 7 pantallas:
+\begin{enumerate}
+    \item Pantalla Principal: es la pantalla de presentación (véase figura ), en ella se muestra el logo de la aplicación , dos botones, iniciar sesión y registrarse, y un recuadro con información relevante sobre la interfaz.
+    \item 
+\end{enumerate}
