@@ -112,7 +112,7 @@ En esta sección se van a explicar de forma detallada cada uno de los casos de u
 			\item Acceder al CMD del ordenador.
 			\item Instalar una a una las bibliotecas.
 		\end{enumerate}\\
-		\textbf{Postcondición}        &  Se podrán abrir la interface sin ningun problema \\
+		\textbf{Postcondición}        &  Se podrán abrir la interface sin ningún problema \\
 		\textbf{Excepciones}          & Si no se instalan correctamente, no se podrá abrir la interfaz \\
 		\textbf{Importancia}          & Alta \\
 		\bottomrule
@@ -129,7 +129,7 @@ En esta sección se van a explicar de forma detallada cada uno de los casos de u
 		\textbf{Versión}              & 1.0    \\
 		\textbf{Autor}                & Claudia Valentín Alguacil \\
 		\textbf{Requisitos asociados} & RF-xx, RF-xx \\
-		\textbf{Descripción}          & Proceso de abrir la interface por parte del sanitario \\
+		\textbf{Descripción}          & Proceso de abrir la interfaz por parte del sanitario \\
 		\textbf{Precondición}         & Que el ingeniero haya realizado correctamente sus funciones de descarga e instalación de los diferentes paquetes y aplicaciones requeridas \\
 		\textbf{Acciones}             &
         Opcion 1: 
@@ -137,7 +137,7 @@ En esta sección se van a explicar de forma detallada cada uno de los casos de u
 			\def\labelenumi{\arabic{enumi}.}
 			\tightlist
 			\item Abrir el CMD del ordenador.
-			\item Navegar hasta la carpeta en la que esta el código descargado.
+			\item Navegar hasta la carpeta en la que está el código descargado.
                 \item Ejecutar el comando:
                 
                 \$ python app.py
@@ -146,18 +146,18 @@ En esta sección se van a explicar de forma detallada cada uno de los casos de u
         \begin{itemize}
         \def\labelenumi{\arabic{enumi}.}
 		  \tightlist
-            \item Abrir Visual Estudio Code
-            \item Abrir la carpeta donde se encuentra el codigo descargado.
+            \item Abrir Visual Studio Code
+            \item Abrir la carpeta donde se encuentra el código descargado.
             \item Ejecutar el comando:
                 
             \$ python app.py
         \end{itemize} \\
 		\textbf{Postcondición}        &  Se abre la interfaz. \\
-		\textbf{Excepciones}          & Que haya algún fallo durante el proceso que realiza el ingeniero o que se acceda mal a la carpeta lo que produciría un error y no se desplegaría la interfaz \\
+		\textbf{Excepciones}          & Que haya algún fallo durante el proceso que realiza el ingeniero o que se acceda mal a la carpeta lo que produciría un error y no se desplegará la interfaz \\
 		\textbf{Importancia}          & Alta \\
 		\bottomrule
 	\end{tabularx}
-	\caption{CU-6 Abrir interface.}
+	\caption{CU-6 Abrir interfaz.}
 \end{table}
 
 \begin{table}[p]
@@ -228,7 +228,7 @@ En esta sección se van a explicar de forma detallada cada uno de los casos de u
 		\textbf{Autor}                & Claudia Valentín Alguacil \\
 		\textbf{Requisitos asociados} & RF-xx, RF-xx \\
 		\textbf{Descripción}          & Registrar el paciente en la interfaz, supone una recolección de datos como su nombre y apellidos que se recogerán en una base de datos \\
-		\textbf{Precondición}  & Que no este el paciente ya registrado y que el sanitario haya iniciado sesión.\\
+		\textbf{Precondición}  & Que no esté el paciente ya registrado y que el sanitario haya iniciado sesión.\\
 		\textbf{Acciones}             &
 		\begin{enumerate}
 			\def\labelenumi{\arabic{enumi}.}
@@ -282,7 +282,7 @@ En esta sección se van a explicar de forma detallada cada uno de los casos de u
 		\textbf{Autor}                & Claudia Valentín Alguacil \\
 		\textbf{Requisitos asociados} & RF-xx, RF-xx \\
 		\textbf{Descripción}          & Proceso de cuantificar los valores que recoge los sensores. \\
-		\textbf{Precondición}         & Conectar placa de arduino al ordenador y tener desplegado la interfaz. \\
+		\textbf{Precondición}         & Conectar placa de arduino al ordenador y tener desplegada la interfaz. \\
 		\textbf{Acciones}             &
 		\begin{enumerate}
 			\def\labelenumi{\arabic{enumi}.}
@@ -376,18 +376,40 @@ Esta interfaz creada consta de 7 pantallas:
     \caption{Pantalla Inicio Sesión.Fuente Propia.}
     \label{fig:Pantalla Inicio Sesión}
 \end{figure}
-    \item Pantalla Registrar Usuario: es la pantalla que permite al usuario (sanitario) registrarse en la interfaz (véase figura \ref{fig:img/Pantalla Registrar Usuario}), en ella se debe introducir el nombre, apellidos, nombre de usuario y contraseña personal. Estos datos se almacenarán en un documento Json.Desde esta pantalla, se puede volver a la pantalla principal sin registrar un nuevo usuario seleccionando el botón 'Volver' o bien, registrar un nuevo usuario seleccionando el botón 'Registrarse'. Realizando la ultima acción la app te dirige de forma automático a la pantalla principal
+    \item Pantalla Registrar Usuario: es la pantalla que permite al usuario (sanitario) registrarse en la interfaz (véase figura \ref{fig:img/Pantalla Registrar Usuario}), en ella se debe introducir el nombre, apellidos, nombre de usuario y contraseña personal. Estos datos se almacenarán en un documento Json. Desde esta pantalla, se puede volver a la pantalla principal sin registrar un nuevo usuario seleccionando el botón 'Volver' o bien, registrar un nuevo usuario seleccionando el botón 'Registrarse'. Realizando la última acción la app te dirige de forma automático a la pantalla principal
     \begin{figure}
         \centering
         \includegraphics[width=1\linewidth]{img/Pantalla Registrar Usuario.png}
         \caption{img/Pantalla Registrar Usuario.Fuente propia}
         \label{fig:img/Pantalla Registrar Usuario}
     \end{figure}
-    \item Pantalla de Inicio: es la pantalla principal de cada usuario (véase figura\ref{fig:Pantalla Inicio} ). Consta de un recuadro con el nombre y apellidos del profesional, un mensaje de bienvenida y dos botones, uno de seleccionar paciente y otro de registrar paciente. Si seleccionamos el primero de ellos, sale un menú desplegable con los diferentes nombre y apellidos de los pacientes registrados. Si seleccionamos el segundo botón, nos dirige a una pantalla nueva que nos permitirá el registro de un nuevo paciente.
+    \item Pantalla de Inicio: es la pantalla principal de cada usuario (véase figura \ref{fig:Pantalla Inicio} ). Consta de un recuadro con el nombre y apellidos del profesional, un mensaje de bienvenida y dos botones, uno de seleccionar paciente y otro de registrar paciente. Si seleccionamos el primero de ellos, sale un menú desplegable con los diferentes nombres y apellidos de los pacientes registrados. Si seleccionamos el segundo botón, nos dirige a una pantalla nueva que nos permitirá el registro de un nuevo paciente.
     \begin{figure}
         \centering
         \includegraphics[width=1\linewidth]{img/Pantalla Inicio.png}
         \caption{Pantalla Inicio. Fuente Propia}
         \label{fig:Pantalla Inicio}
+    \end{figure}
+    \item Pantalla Registrar paciente: es la pantalla que permite al usuario (sanitario) registrar a un nuevo paciente en la base de datos (véase figura \ref{fig:Pantalla registrar Paciente}), en ella se debe introducir el nombre y apellidos del paciente. Estos datos se almacenarán en un documento excel, donde además, se guardarán las diferentes cuantificaciones de fuerza. Desde esta pantalla, se puede volver a la pantalla principal sin registrar un nuevo paciente seleccionando el botón 'Volver' o bien, registrar un nuevo paciente seleccionando el botón 'Registrar paciente'. Realizando la última acción la app te dirige de forma automática a la pantalla de inicio.
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{img/Pantalla registrar Paciente.png}
+        \caption{Pantalla registrar Paciente. Fuente propia}
+        \label{fig:Pantalla registrar Paciente}
+    \end{figure}
+    \item Pantalla paciente: es la pantalla general de cada paciente (véase figura \ref{fig:Pantalla paciente}). Esta contiene un recuadro superior con el nombre y apellidos del paciente y 3 botones, 'Iniciar medición', 'Visualización Registro' y 'Volver. Al pulsar sobre el primero de ellos realiza el proceso de medir la fuerza ejercida en los sensores, esta cuantificación se guarda automáticamente en una base de datos. Al pulsar sobre el segundo botón se abre una pantalla nueva, y al pulsar sobre el último botón vuelve a la pantalla de inicio.
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{img/Pantalla paciente.png}
+        \caption{Pantalla paciente. Fuente propia}
+        \label{fig:Pantalla paciente}
+    \end{figure}
+    \item Pantalla visualización: es la pantalla a la que se accede al pulsar el botón 'Visualizar Registro' en la pantalla paciente. En ella se muestra el registro de las mediciones realizadas por el paciente (véase figura \ref{fig:Pantalla visualización}). Tiene un botón 'Volver' para poder volver a la pantalla paciente y hacer nuevas mediciones o seguir volviendo atrás y elegir un paciente nuevo.
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{img/Pantalla visualización.png}
+        \caption{Pantalla visualización. Fuente propia}
+        \label{fig:Pantalla visualización}
     \end{figure}
 \end{enumerate}
