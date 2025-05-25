@@ -1,4 +1,4 @@
-\capitulo{1}{Planificación}
+\apendice{Plan de Proyecto Software}
 \section{Introducción}
 Este anexo tiene como objetivo una presentación de manera integral de todos los aspectos clave relacionados con el desarrollo y la implementación del proyecto. 
 
@@ -29,7 +29,7 @@ En la tabla \ref{tab:costes_hardware} se ha realizado un resumen de gastos y pre
 \hline
 \rowcolor[HTML]{BFBFBF} 
 \textbf{} & \textbf{Cálculos} & \textbf{Precio} \\ \hline
-Gastos de los componentes & Suma total de los precios de los componentes del dispositvo & 60,37€\\ \hline
+Gastos de los componentes & Suma total de los precios de los componentes del dispositivo & 60,37€\\ \hline
 Gastos de producción & 10\% del precio de los
  componentes & 6,04€\\ \hline
 Ingresos destinados a beneficio & 15\% de los gastos totales & 9,96€\\ \hline
@@ -49,18 +49,65 @@ Los precios de cada componente han sido seleccionados, siendo los mínimos encon
     \item Protoboard=2,83€
 \end{itemize}
 No se han contemplado los gastos de la compra de un ordenador, ya que en la actualidad en toda área del hospital se cuenta con uno de forma habitual. 
-\subsection{Precios software}
 
+\subsubsection{Mango}
+
+Para complementar con el desarrollo del proyecto, se ha diseñado un mango (véase figuras \ref{fig:Visión 1 del Mango.} \ref{fig:Visión 2 del Mango} \ref{fig:Visión 3 del Mango}) donde colocar los sensores.Diseñado especialmente para ser utilizado con la tabla canadiense. 
+
+Está diseñado con la aplicación FreeCAD. Sus dimensión son  60x60x135 mm. Cuenta con un agujero interior para insertar una de las barras de la tabla canadiense. 
+Además, tiene cinco hendiduras destinadas a situar cada uno de los sensores.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.35\linewidth]{img/Mango1.png}
+    \caption{Visión 1 del Mango. Fuente propia}
+    \label{fig:Visión 1 del Mango.}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.25\linewidth]{img/Mango2.png}
+    \caption{Visión 2 del Mango. Fuente propia}
+    \label{fig:Visión 2 del Mango}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.25\linewidth]{img/Mango3.png}
+    \caption{Visión 3 del Mango. Fuente propia}
+    \label{fig:Visión 3 del Mango}
+\end{figure}
+
+Para tener este producto en físico, se ha pensado en la impresión 3D. 
+Se ha ideado dos presupuestos diferentes según el método de impresión:
+\begin{enumerate}
+    \item Impresión propia :he seleccionado la impresora Ender-3 V3 SE \cite{Ender-3}, con un precio de 169 € y un filamento PLA\cite{PLA}, con un precio de  20,99 € el Kg. 
+    \item Impresion mediante una empresa externa: he seleccionado la empresa ErreBiLAB \cite{ErreBiLAB}, ya que ofrece el precio mas bajo de los que he visto disponibles. El precio de una pieza es de 41,03 €, este precio se va disminuyendo según el volumen de encargos. 
+\end{enumerate}
+
+La tabla \ref{tab:Impresión} resume lo que supondría esta adicción al prototipo (por cada mango), teniendo en cuenta la fabricación de 10 mangos. 
+Ambas impresiones tienen los mismos requisitos.
+\begin{table}[h] 
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \rowcolor[HTML]{BFBFBF} 
+    \textbf{Impresión propia} & \textbf{Imprimir mediante un 3º} \\ \hline
+     17,6€ & 37€  \\ \hline
+    \end{tabular}
+    \caption{Costes de impresión}
+    \label{tab:Impresión}
+\end{table}
+
+\subsection{Precios software}
 No se incluye ningún gasto en software ya que todo el material utilizado es gratuito y de código abierto.
 
 \subsection{Precio de personal}
-Para calcular el salario del personal se ha partido de los datos publicados de salarios de ingenieros biomédicos, profesionales con un perfil técnico y formativo parecido al ingeniero de la salud.
-Actualmente, en España el sueldo medio de un ingeniero biomédico es de 3.500€ \cite{SueldoBioing}\footnote{Pagina web de indeed, donde se puede ver sueldos de diferentes trabajos  \cite{SueldoBioing}.}\cite{SUELDO}. Este sueldo es más bajo en recién egresados suponiendo un sueldo aproximado entre 1.500€ y 1.900€ mensuales.\cite{Sueldo_egresado}\footnote{Pagina web de la UAX con información económica sobre el salario de un graduado en ingeniería biomédica? \cite{Sueldo_egresado}.}.
+Para calcular el salario del personal se ha partido de los datos publicados de salarios de ingenieros biomédicos, profesionales con un perfil técnico y formativo parecido al de un ingeniero de la salud.
+Actualmente, en España el sueldo medio de un ingeniero biomédico es de 3.500€ \cite{SueldoBioing}\footnote{Página web de indeed, donde se puede ver sueldos de diferentes trabajos  \cite{SueldoBioing}.}\cite{SUELDO}. Este sueldo es más bajo en recién egresados suponiendo un sueldo aproximado entre 1.500€ y 1.900€ mensuales.\cite{Sueldo_egresado}\footnote{Página web de la UAX con información económica sobre el salario de un graduado en ingeniería biomédica? \cite{Sueldo_egresado}.}.
 
 
 En la tabla \ref{tab:costes_personal} se recoge el sueldo aproximado que debería cobrar por el proyecto un ingeniero de la salud.
 
-\begin{table}[]
+\begin{table}[h]
 \centering
 \begin{tabular}{|l|l|}
 \hline
@@ -73,7 +120,7 @@ Sueldo mensual & 1.600€ \\ \hline
 \label{tab:costes_personal}
 \end{table}
 
-\begin{table}[]
+\begin{table}[h]
 \centering
 \begin{tabular}{|l|l|}
 \hline
@@ -92,7 +139,7 @@ Se debe tener en cuenta la normativa legal desde la creación de la idea hasta l
 
 Es esencial la implementación de leyes que garanticen el cumplimiento de la normativa aplicable que respalde los derechos y obligaciones del autor.Incluyendo desde leyes de las regulaciones técnicas, de propiedad intelectual y de responsabilidad profesional, conforme a lo establecido en la legislación.
 
-Asimismo, se debe implementar medidas vigorosas que protejan la integridad de los usuarios y la confidencialidad de sus datos. 
+Asimismo, se deben implementar medidas vigorosas que protejan la integridad de los usuarios y la confidencialidad de sus datos. 
 
 Podemos dividir el proceso en 2 fases, la primera fase incluiría la creación de la idea, diseño,desarrollo y realización de pruebas, y una segunda fase que incluya la comercialización y postventa.
 
@@ -101,7 +148,7 @@ Podemos dividir el proceso en 2 fases, la primera fase incluiría la creación d
 Durante la primera fase de creación de la idea, diseño, desarrollo y realización de pruebas, se deberán incluir las siguientes normas legislativas: 
 
 \begin{itemize}
-    \item Ley 24/2015, de 24 de julio \cite{boe--2015-8328}, de Patentes: Establece los derechos, requisitos y procedimientos para obtener una patente y reforzar la seguridad jurídica.Esta ultima versión simplifica y agiliza el procedimiento.
+    \item Ley 24/2015, de 24 de julio \cite{boe--2015-8328}, de Patentes: Establece los derechos, requisitos y procedimientos para obtener una patente y reforzar la seguridad jurídica.Esta última versión simplifica y agiliza el procedimiento.
     \item Real Decreto Legislativo 1/1996, de 12 de abril,\cite{boe--1996-8930} sobre la Ley de la Propiedad Intelectual: Establece los derechos de un obra al autor solo por el hecho de crearlo. 
     \item Real Decreto 192/2023, de 21 de marzo \cite{ministerio_de_sanidad_real_2023}, por el que se regulan los productos sanitarios. 
     \item UNE-EN 60601-1:2008 \cite{UNE2008}, norma que regula los requisitos generales para la seguridad básica y funcionamiento esencial de equipos electromédicos.
