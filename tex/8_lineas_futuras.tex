@@ -1,8 +1,13 @@
-\capitulo{6}{Lineas Futuras}
+\capitulo{8}{Líneas Futuras}
 Al tratarse de un prototipo, se pueden realizar varias mejoras para llegar a un dispositivo comerciable , robusto y de bajo coste.
 
 Una de las primeras mejoras que podría implementarse es la eliminación del botón físico del dispositivo destinado a inicio de la medición, de manera que esta se active directamente al presionar 'Iniciar medición' en la interfaz. 
 
 Asimismo, se podrían diseñar diferentes tipos de mangos donde poner los sensores, variando tanto en tamaño como en los materiales a utilizar. Debido a que el medio utilizado es impresión 3D, las posibilidades de personalización son muy amplias. Se podría utilizar material semielástico, permitiendo así una leve deformación, ya que estos materiales combinan flexibilidad y resistencia. Otra posibilidad, podría ser emplear compuestos como mezclas de PLA con polvo metálico, que aportarían mayor rigidez y peso, lo que supondría un desafío adicional durante el ejercicio.
 
-De otra manera, se puede emplear un cambio en el tamaño ajustando el diámetro del mango, lo que permite la adaptación en el agarre a las necesidades especificas de cada persona. Contar con estos diferentes diámetros facilita el agarre para las personas según las diferentes patologías que puedan afectar la movilidad o fuerza de la mano.
+De otra manera, se puede emplear un cambio en el tamaño ajustando el diámetro del mango. Contar con estos diferentes diámetros facilita el agarre para las personas según las diferentes patologías que tengan ya sea que afecten la movilidad o fuerza de la mano.
+
+Además, se podría implementar una funcionalidad que permita generar un informe final por paciente imprimible, permitiendo que forme parte de la historia clínica. Usando la biblioteca FPDF, podemos generar archivos pdf con posibilidad de imprimir.
+
+Por último, mejorar el desplegable para que se abra como una aplicación más de escritorio y no haga falta acceder desde el CMD o terceras aplicaciones como Visual Studio Code.
+Con kivymd solo se podrá realizar esto para archivos con sistema operativo windows, para realizarlo se deberá crear un paquete especial siguiendo los pasos de la documentación de Kivymd \cite{kivymdapp}
