@@ -1,25 +1,26 @@
 \apendice{Manual del  programador.} 
 \section{Estructura de directorios}
-A continuación, se va a explicar la estructura de directorios situados en el Github.
+En este capítulo, se va a explicar la estructura de directorios situados en el Github.
 \begin{itemize}
     \item AplicaciónEscritorio: Carpeta que contiene todo el código para la implementación de la interfaz.
     \begin{itemize}
         \item app.py: código de la interfaz
         \item interfaz.kv: código con el que se ha diseñado la interfaz
-        \item Arduino.ino: Código arduino con el que se pueden realizar mediciones sin necesidad de la interfaz
+        \item Arduino.ino: código arduino con el que se pueden realizar mediciones sin necesidad de la interfaz
     \end{itemize}
-    \item Diseño: Carpeta que contiene el diseño del mango
-    \item img: Carpeta que contiene todas las imágenes que se han utilizado para la realización del proyecto 
-    \item tex:Carpeta que contiene todos los capítulos de la memoria y anexos
+    \item Diseño: carpeta que contiene el diseño del mango
+    \item img: carpeta que contiene todas las imágenes que se han utilizado para la realización del proyecto 
+    \item tex: carpeta que contiene todos los capítulos de la memoria y anexos
     \begin{itemize}
         \item 1\_introducción.tex: documento LaTeX en el que se realiza la descripción inicial del proyecto.
-        \item 2\_objetivos.tex: documento LaTeX en el que se exponen  Objetivos principales del proyecto y personales.
+        \item 2\_objetivos.tex: documento LaTeX en el que se exponen objetivos principales del proyecto y personales.
         \item 3\_teoricos.tex: documento LaTeX que recoge los conceptos teóricos y el estado del arte.
-        \item 4\_metodología.tex: documento LaTeX en el que se exponen las técnicas y herramientas utilizadas para la realización del proyecto.
-        \item 5\_resultados.tex: documento LaTeX que recoge un resumen de los resultados del proyecto
-        \item 6\_conclusión.tex: documento LaTeX en que se exponen las conclusiones que se han sacado en la realización del proyecto
-        \item 7\_lineas\_futuras.tex: documento LaTeX que recoge las posibles lineas futuras que puede experimentar el proyecto.
-        \item A\_planificación.tex: documento LaTeX en el que se expone la planificación temporal y economica y la viabilidad legal
+        \item 4\_DicusiónClinica.tex: documento LaTeX que recoge la información clínica, seguridad y comparación con otros estudios.
+        \item 5\_metodología.tex: documento LaTeX en el que se exponen las técnicas y herramientas utilizadas para la realización del proyecto.
+        \item 6\_resultados.tex: documento LaTeX que recoge un resumen de los resultados del proyecto
+        \item 7\_conclusión.tex: documento LaTeX en que se exponen las conclusiones que se han sacado en la realización del proyecto
+        \item 8\_lineas\_futuras.tex: documento LaTeX que recoge las posibles líneas futuras que puede experimentar el proyecto.
+        \item A\_planificación.tex: documento LaTeX en el que se expone la planificación temporal y económica y la viabilidad legal
         \item B\_manual\_usuario.tex: documento LaTeX que recogen aquellos requisitos necesarios para la ejecución y puesta en marcha del proyecto.
         \item C\_manual\_programador.tex: documento LaTeX que recoge la estructura de directioros del proyecto.
         \item D\_datos.tex: documento LaTeX que recoge la descripción de los datos recogidos.
@@ -28,16 +29,16 @@ A continuación, se va a explicar la estructura de directorios situados en el Gi
         \item G\_experimental.tex: documento LaTeX que detalla la configuración y parametrización de las técnicas utilizadas.
         \item H\_ODS.tex: documento LaTeX que incluye una reflexión personal sobre los aspectos de la sostenibilidad que se abordan en el proyecto.
     \end{itemize}
-    \item Readme.md: archivo md (lenguaje de texto markdown) de presentación del proyecto en GitHub.
+    \item Readme.md: archivo md (lenguaje de texto Mark Down) de presentación del proyecto en GitHub.
     \item Memoria\_Anexos\_PDF: Carpeta que contiene el documento de memoria y el de anexo en formato pdf.
     \begin{itemize}
         \item memoria.pdf: documento pdf con la memoria completa.
         \item anexo.pdf: documento pdf con el anexo completo.
     \end{itemize}
-    \item anexo.tex:Documento LaTeX que contiene la estructura del anexo.
-    \item memoria.tex: Documento LaTeX que contiene la estructura de la memoria.
-    \item bibliografia.bib:Documento que recoge toda la bibliografía empleada en la memoria
-    \item bibliografiaAnexos.bib:Documento que recoge toda la bibliografía empleada en el anexo
+    \item anexo.tex: documento LaTeX que contiene la estructura del anexo.
+    \item memoria.tex: documento LaTeX que contiene la estructura de la memoria.
+    \item bibliografia.bib: documento que recoge toda la bibliografía empleada en la memoria
+    \item bibliografiaAnexos.bib: documento que recoge toda la bibliografía empleada en el anexo
 \end{itemize}
 \section{Compilación, instalación y ejecución del proyecto}
 Para la compilación y ejecución del proyecto es necesario: 
@@ -45,6 +46,15 @@ Para la compilación y ejecución del proyecto es necesario:
     \item Instalación de Arduino IDE y Python
     \item Una vez instalados abrir la consola CMD e instalar las bibliotecas necesarias, especificadas en el apartado 2 del anexo B. 
     \item A continuación, será necesario la descarga de los archivos de la carpeta AplicacionEscritorio del repositorio de GitHub. Abrir el archivo Arduino.ino en la aplicación Arduino IDE, conectar la placa arduino mediante el puerto USB al ordenador y enviar el archivo a la placa. 
-    \item Para finalizar, abrir el CMD o una aplicación de editor de texto como Visual Estudio Code, navegar hasta la localización de la carpeta y ejecutar python app.py 
+    \item Para finalizar, abrir el CMD o una aplicación de editor de texto como Visual Studio Code, navegar hasta la localización de la carpeta y ejecutar python app.py 
 \end{itemize}
+
 \section{Instrucciones para la modificación o mejora del proyecto.}
+
+Debido a que en la realización del proyecto se han realizado dos prototipos, el físico y el desplegable, se podrían implementar varias mejoras.
+
+Si hablamos del dispositivo físico, se podría realizar un estudio con otros sensores de menor tamaño para que niños o personas con las manos más pequeñas pudieran utilizarlo correctamente. Así mismo, la implementación de resortes podría ser útil, ya que implica un esfuerzo extra para el paciente al aplicar una fuerza constante. 
+
+En cuanto al desplegable, que fuera posible que se acceda al desplegable sin necesidad de tener que abrir el CMD del ordenador facilitaría su uso a los profesionales.
+
+La configuración y parametrización de los sensores se podría mejorar utilizando una báscula profesional y aplicando una fuerza constante exacta, ya que debido a los materiales que se disponían este proceso ha sido más rudimentario.

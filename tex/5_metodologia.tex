@@ -1,9 +1,10 @@
 \capitulo{5}{Metodología}
 
 \section{Descripción de los Datos}
-Para la realización del proyecto, no se han utilizado datos predefinidos por bases de datos, APIs públicas u otras fuentes de información.Los datos que aparecen son los obtenidos por los sensores durante las pruebas del dispositivo.
+Para la realización del proyecto, no se han utilizado datos predefinidos por bases de datos, APIs públicas u otras fuentes de información. Los datos que aparecen son los obtenidos por los sensores durante las pruebas del dispositivo.
 \section{Técnicas metodológicas de programación}
-En esta sección se detallan las técnicas metodológicas de programación empleadas en el desarrollo del proyecto. 
+En esta sección se detallan las técnicas metodológicas de programación empleadas en el desarrollo del proyecto. Para detalles técnicos sobre bibliotecas específicas y estructura del proyecto, véase Apéndices B.1 y C.1 del anexo técnico.
+
 \subsection{Lenguajes de programación}
 En el proyecto se emplearon los siguientes lenguajes de programación especialmente seleccionados para cumplir con los requisitos de este.
 \subsubsection{\textit{C++}}
@@ -16,13 +17,12 @@ Python es un lenguaje alto de programación altamente usado, interpretado y mult
 Ampliamente utilizado en el desarrollo web, ciberseguridad, aprendizaje automático, desarrollo de aplicaciones o la automatización de tareas, entre muchas otras aplicaciones.\cite{Python}\footnote{Página web con información de Python\cite{Python}.}
 \subsubsection{\textit{Bash}}
 Bash es un lenguaje de comandos y shell de Unix/Linux, también conocido como shell scripting o comandos de terminal.
-Se ejecuta en una terminal o ventana de texto.\cite{Bash}\footnote{Página web con información de Bash\cite{Bash}.}
+Se ejecuta en una terminal o ventana de texto. \cite{Bash}\footnote{Página web con información de Bash\cite{Bash}.}
 
 En este proyecto ha sido utilizado en la terminal de Rstudio para la creación de archivos, actualización de GitHub entre otras tareas.
 
 \subsection{Bibliotecas}
 Las bibliotecas o librerías son un conjunto de funciones, clases y recursos ya escritos que se pueden utilizar de manera libre para agilizar procesos. 
-
 \subsubsection{json}
 Librería que permite la edición y adición de documentos JSON.
 \subsubsection{os}
@@ -40,9 +40,9 @@ Liberia que permite encriptar y desencriptar palabras, frases o documentos. \cit
 
 Utilizada para encriptar los archivos que recogen datos sensibles de pacientes o personal sanitario.
 \section{Entornos y aplicaciones}
-En esta sección voy a realizar una recopilación de aplicaciones y entornos que he utilizado para la realización del proyecto, todas ellas explicadas y utilizadas en diferentes asignaturas del grado.
+En esta sección voy a realizar una recopilación de aplicaciones y entornos que he utilizado para la realización del proyecto, todas ellas explicadas y utilizadas en diferentes asignaturas del grado. El entorno de desarrollo y la estructura de archivos se describen con mayor detalle en el Apéndice C.1 del anexo.
 \subsection{Overleaf}
-Herramienta en línea que permite redactar,editar,exportar y compartir con otros usuarios documentos científicos en formato LaTeX.
+El Overleaf es una herramienta en línea que permite redactar, editar, exportar y compartir con otros usuarios documentos científicos en formato LaTeX.
 
 En este proyecto, se utiliza Overleaf para la creación de este documento y el anexo.
 \subsection{RStudio}
@@ -50,7 +50,7 @@ RStudio es un entorno de software libre para computación estadística y gráfic
 
 En este proyecto, se utiliza RStudio para realizar una unión entre el repositorio de GitHub y la carpeta de mi escritorio del ordenador donde voy avanzando el proyecto.
 \subsection{GitHub}
-GitHub es una plataforma basada en la nube cuya finalidad es almacenar,compartir y trabajar en conjunto con otros usuarios. 
+GitHub es una plataforma basada en la nube cuya finalidad es almacenar, compartir y trabajar en conjunto con otros usuarios. 
 Además, permite tener un seguimiento del trabajo, lo que permite ver todas las versiones que se van realizando de este mismo.\cite{GitHub}\footnote{Página web de GitHub\cite{GitHub}.} 
 
 En este proyecto, GitHub se ha utilizado para realizar un seguimiento del proyecto, permitiendo que tanto el tutor como los miembros del tribunal puedan visualizar los cambios realizados y participar activamente en el proceso.
@@ -73,7 +73,7 @@ Chat GPT es una inteligencia artificial.
 
 En este proyecto, ha sido utilizada para la creación del logo y la solución de errores que iban surgiendo en el desarrollo del desplegable.
 \section{Herramientas}
-En esta sección voy a exponer y explicar las herramientas que he utilizado en el proyecto.
+En esta sección voy a exponer y explicar las herramientas que he utilizado en el proyecto. Los planos y diagramas de conexiones pueden consultarse en el Apéndice E del anexo.
 \subsection{Placa de Elegoo uno R3}
 Placa de Arduino es una placa de desarrollo de código abierto. 
 Integra el microcontrolador chip Atmel ATMEGA+328P principal y un ATmega16U2 para la comunicación con USB. \cite{Elegoo}\footnote{Página web con información de placa Elegoo\cite{Elegoo}.}
@@ -106,7 +106,7 @@ En la \textit{Figura \ref{fig:Cable USB}} se puede ver una imagen del componente
 \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{img/cable usb.png}
-        \caption{Cable USB.Fuente propia}
+        \caption{Cable USB. Fuente propia}
         \label{fig:Cable USB}
     \end{figure}
    
@@ -117,12 +117,12 @@ En la \textit{Figura \ref{fig:Resistencias}} se puede ver una imagen del compone
 \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{img/Resistencias.png}
-        \caption{Resistencia.Fuente propia}
+        \caption{Resistencia. Fuente propia}
         \label{fig:Resistencias}
     \end{figure}
     
 \subsection{Protoboard}
-La protoboard o también llamada placa de pruebas, permite la creación de circuitos electrónicos.Es una matriz con orificios interconectados que permiten la inserción de componentes eléctricos. 
+La protoboard o también llamada placa de pruebas, permite la creación de circuitos electrónicos. Es una matriz con orificios interconectados que permiten la inserción de componentes eléctricos. 
 
 En la \textit{Figura \ref{fig:Protoboard} } se puede ver una imagen del componente.
 \begin{figure}[h]
@@ -133,7 +133,7 @@ En la \textit{Figura \ref{fig:Protoboard} } se puede ver una imagen del componen
     \end{figure}
 
 \subsection{Pin Botón}
-Pin botón en arduino es un dispositivo de entrada que, al ser pulsado, cambia el estado del pin digital, permitiendo que el programa detecte y haga acciones cuando el usuario pulse el botón.
+El pin botón es un dispositivo de entrada que, al ser pulsado, cambia el estado del pin digital, permitiendo que el programa detecte y haga acciones cuando el usuario pulse el botón.
 
 En la \textit{Figura} \ref{fig:pinBoton}, se puede ver una imagen del componente.
 
@@ -152,7 +152,7 @@ En la \textit{Figura} \ref{fig:LuzLed}, se puede ver una imagen del componente.
         \centering
         \includegraphics[width=0.5\textwidth]{img/Luzled.png}
         \caption{Luz led. Fuente propia}
-        \label{fig:pinBoton}
+        \label{fig:LuzLed}
     \end{figure}
     
 \subsection{Posibles sensores}
@@ -161,15 +161,15 @@ En esta subsección se presentarán los sensores investigados para la realizaci�
 Los sensores de fuerza resistivos son sensores capaces de detectar la presión o fuerza que se les ejerce.
 Como su propio nombre dice, necesita para su uso una resistencia, la cual actúa como divisor de voltaje.
 \subsubsection{\textit{{Células de carga}}}
-Las células de carga son herramientas muy utilizadas en la industria para las mediciones de fuerza,compresión y tensión.
+Las células de carga son herramientas muy utilizadas en la industria para las mediciones de fuerza, compresión y tensión.
 Son un tipo de transductores que convierten la fuerza aplicada  en una señal eléctrica medible. \cite{Celula_Carga}\footnote{Página web con información sobre las células de carga\cite{Celula_Carga}.}
 Existen múltiples tipos de los cuales destacamos los siguientes:
     \begin{itemize}
-        \item Células de cargas mecánicas: miden la fuerza mecánica al aplicarle un objeto, miden pesos.
-        \item Células de carga extensométricas: miden deformaciones locales según su posición.La medida de la fuerza es determinada por la integración de los valores de cada valor individual, formado por un transductor de fuerza y un elemento elástico.\cite{celulas_extensométricas}\footnote{Página web con información de las células de carga de tipo extensométricas\cite{celulas_extensométricas}.}
-        \item Células de carga hidráulicas:dispositivo llenó de un líquido con tiene una presión de precarga, al aplicar la fuerza aumenta la presión del líquido que es medida por un transductor de presión.
+        \item Células de cargas mecánicas: dispositivo que mide la fuerza mecánica al aplicarle un objeto, miden pesos.
+        \item Células de carga extensométricas: dispositivo que mide deformaciones locales según su posición. La medida de la fuerza es determinada por la integración de los valores de cada valor individual, formado por un transductor de fuerza y un elemento elástico.\cite{celulas_extensométricas}\footnote{Página web con información de las células de carga de tipo extensométricas\cite{celulas_extensométricas}.}
+        \item Células de carga hidráulicas: dispositivo llenó de un líquido con tiene una presión de precarga, al aplicar la fuerza aumenta la presión del líquido que es medida por un transductor de presión.
         \cite{Celulas_hidraulicas}\footnote{Página web con información de las células de carga de tipo hidraulicas\cite{Celulas_hidraulicas}.}
-        \item Células de carga piezoeléctricas: miden fuerzas dinámicas o cuasiestáticas, tanto de tracción como compresión.Muy sensibles y rápidas.
+        \item Células de carga piezoeléctricas: dispositivo que mide fuerzas dinámicas o cuasiestáticas, tanto de tracción como compresión. Muy sensibles y rápidas.
         \cite{Celulas_piezoelectricas}\footnote{Página web con información de las células de carga de tipo piezoélectricas \cite{Celulas_piezoelectricas}.}
     \end{itemize}
 En la \textit{tabla \ref{tab:comparacion_sensores}} se realiza un resumen donde se expondrán el tipo, características y precio aproximado de cada una de ellas.
@@ -177,18 +177,12 @@ En la \textit{tabla \ref{tab:comparacion_sensores}} se realiza un resumen donde 
     \begin{tabular}{|p{4cm}|p{8cm}|p{1.5cm}|}
     \rowcolor[HTML]{BFBFBF} 
     \hline
-    \textbf{Tipo} & \textbf{Características de medición} & \textbf{Precio} \\
-    \hline
-    Células de carga mecánica & Rango de medición limitado, respuesta lenta, bajo costo, bajo mantenimiento & 10-200€ \\
-    \hline
-    Células de carga extensiométricas & Rango amplio (hasta 50 kN o más), buena precisión, alta estabilidad & 30-200€ \\
-    \hline
-    Células de carga hidráulicas & Medición de fuerzas grandes (hasta 100 kN), sin electrónica, resistente a ambientes hostiles & 50-300€ \\
-    \hline
-    Células de carga piezoeléctrica & Aproximadamente de 10 N a 300 kN, de precisión muy alta, ideal para fuerzas dinámicas & 60-500€ \\
-    \hline
-    Sensor de fuerza resistivo & Aproximadamente de 0-300N, precisión alta y de pequeño tamaño & 7-30€ \\
-    \hline
+    \textbf{Tipo} & \textbf{Características de medición} & \textbf{Precio} \\    \hline
+    Células de carga mecánica & Rango de medición limitado, respuesta lenta, bajo costo, bajo mantenimiento & 10-200€ \\    \hline
+    Células de carga extensiométricas & Rango amplio (hasta 50 kN o más), buena precisión, alta estabilidad & 30-200€ \\    \hline
+    Células de carga hidráulicas & Medición de fuerzas grandes (hasta 100 kN), sin electrónica, resistente a ambientes hostiles & 50-300€ \\    \hline
+    Células de carga piezoeléctrica & Rango de aproximadamente de 10 N a 300 kN, de precisión muy alta, ideal para fuerzas dinámicas & 60-500€ \\    \hline
+    Sensor de fuerza resistivo & Rango de aproximadamente de 0-300N, precisión alta y de pequeño tamaño & 7-30€ \\ \hline
     \end{tabular}
     \caption{Tabla de comparación de sensores de fuerza}
     \label{tab:comparacion_sensores}
@@ -197,12 +191,13 @@ En la \textit{tabla \ref{tab:comparacion_sensores}} se realiza un resumen donde 
 Tras comparar los distintos sensores según su precio, características e integración, he concluido que los sensores de fuerza resistivos son la mejor opción para llevar a cabo el proyecto.
 
 \subsection{{Sensor de fuerza resistivo}}
-Como se ha explicado anteriormente los sensores de fuerza resistivos son sensores capaces de medir la fuerza ejercida con el uso de resistencias.
+Como se ha explicado anteriormente, los sensores de fuerza resistivos son sensores capaces de medir la fuerza ejercida con el uso de resistencias.
 
 Para el proyecto se ha utilizado el sensor MD30-60 capaz de medir de 0 a 30Kg. 
+
 \begin{figure}[h]
         \centering
-        \includegraphics[,width=0.5\textwidth]{img/sensor.png}
-        \caption{Sensor de fuerza MD30-60}
+        \includegraphics[,width=0.3\textwidth]{img/sensor.png}
+        \caption{Sensor de fuerza MD30-60. Fuente propia}
         \label{fig:Sensor de fuerza}
 \end{figure}
