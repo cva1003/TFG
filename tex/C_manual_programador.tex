@@ -1,16 +1,18 @@
 \apendice{Manual del  programador.} 
 \section{Estructura de directorios}
-En este capítulo, se va a explicar la estructura de directorios situados en el Github.
+En este capítulo, se va a explicar la estructura de directorios situados en el \href{https://github.com/cva1003/TFG}{repositorio} de Github.
 \begin{itemize}
-    \item AplicaciónEscritorio: Carpeta que contiene todo el código para la implementación de la interfaz.
+    \item AplicaciónEscritorio: carpeta que contiene todo el código para la implementación de la interfaz.
     \begin{itemize}
-        \item app.py: código de la interfaz
-        \item interfaz.kv: código con el que se ha diseñado la interfaz
-        \item Arduino.ino: código arduino con el que se pueden realizar mediciones sin necesidad de la interfaz
+        \item app.py: código de la interfaz.
+        \item interfaz.kv: código con el que se ha diseñado la interfaz.
+        \item Arduino.ino: código arduino con el que se pueden realizar mediciones sin necesidad de la interfaz.
+        \item cifrar.py: código python para cifrar los documentos, este codigo tambien esta incluido en app.py para descifrar y cifrar los documentos al abrir y cerrar la interfaz.
     \end{itemize}
     \item Diseño: carpeta que contiene el diseño del mango
-    \item img: carpeta que contiene todas las imágenes que se han utilizado para la realización del proyecto 
-    \item tex: carpeta que contiene todos los capítulos de la memoria y anexos
+    \item Videos: carpeta que contiene videos que muestran el funcionamiento de los prototipos.
+    \item img: carpeta que contiene todas las imágenes que se han utilizado para la realización del proyecto.
+    \item tex: carpeta que contiene todos los capítulos de la memoria y anexos.
     \begin{itemize}
         \item 1\_introducción.tex: documento LaTeX en el que se realiza la descripción inicial del proyecto.
         \item 2\_objetivos.tex: documento LaTeX en el que se exponen objetivos principales del proyecto y personales.
@@ -37,16 +39,16 @@ En este capítulo, se va a explicar la estructura de directorios situados en el 
     \end{itemize}
     \item anexo.tex: documento LaTeX que contiene la estructura del anexo.
     \item memoria.tex: documento LaTeX que contiene la estructura de la memoria.
-    \item bibliografia.bib: documento que recoge toda la bibliografía empleada en la memoria
-    \item bibliografiaAnexos.bib: documento que recoge toda la bibliografía empleada en el anexo
+    \item bibliografia.bib: documento que recoge toda la bibliografía empleada en la memoria.
+    \item bibliografiaAnexos.bib: documento que recoge toda la bibliografía empleada en el anexo.
 \end{itemize}
 \section{Compilación, instalación y ejecución del proyecto}
 Para la compilación y ejecución del proyecto es necesario: 
 \begin{itemize}
-    \item Instalación de Arduino IDE y Python
+    \item Instalación de Arduino IDE y Python.
     \item Una vez instalados abrir la consola CMD e instalar las bibliotecas necesarias, especificadas en el apartado 2 del anexo B. 
     \item A continuación, será necesario la descarga de los archivos de la carpeta AplicacionEscritorio del repositorio de GitHub. Abrir el archivo Arduino.ino en la aplicación Arduino IDE, conectar la placa arduino mediante el puerto USB al ordenador y enviar el archivo a la placa. 
-    \item Para finalizar, abrir el CMD o una aplicación de editor de texto como Visual Studio Code, navegar hasta la localización de la carpeta y ejecutar python app.py 
+    \item Para finalizar, abrir el CMD o una aplicación de editor de texto como Visual Studio Code, navegar hasta la localización de la carpeta y ejecutar python app.py .
 \end{itemize}
 
 \section{Instrucciones para la modificación o mejora del proyecto.}
